@@ -15,15 +15,91 @@
 </p>
 
 <p>
-  <strong>Availability:</strong>
-  <%= @profile.availability %>
+  
+  <% if @profile.availability == true %>
+    Yes, I am currently available for projects.
+  <% else %>  
+    No, I am not currently available for projects.
+  <% end %>
 </p>
 
 <p>
-  <strong>Editing:</strong>
-  <%= @profile.editing %>
-  <strong>Camera:</strong>
-  <%= @profile.camera %>
+
+  <% if @profile.editing == true %>
+    <strong>Editing</strong>
+  <% end %>
+
+
+  <% if @profile.camera == true %>
+    <strong>Camera</strong>
+  <% end %>
+
+  <% if @profile.sound == true %>
+    <strong>Sound</strong>
+  <% end %>
+
+
+
+  <% if @profile.writing == true %>
+    <strong>Writing</strong>
+  <% end %>
+
+  <% if @profile.animation == true %>
+    <strong>Animation</strong>
+  <% end %>
+
+  <% if @profile.acting  == true %>
+    <strong>Acting</strong>
+  <% end %>
+
+  <% if @profile.lighting  == true %>
+    <strong>Lighting</strong>
+  <% end %>
+
+  <% if @profile.grip  == true %>
+    <strong>Grip:</strong>
+  <% end %>
+
+  <% if @profile.music == true %>
+    <strong>Music</strong>
+  <% end %>
+
+  <% if @profile.photography == true %>
+    <strong>Photography:</strong>
+  <% end %>
+
+  <% if @profile.artdept == true %>
+    <strong>Art Department</strong>
+  <% end %>
+
+  <% if @profile.locations == true %>
+    <strong>Locations</strong>
+  <% end %>
+
+  <% if @profile.directing == true %>
+    <strong>Directing</strong>
+  <% end %>
+
+  <% if @profile.producing == true %>
+    <strong>Producing</strong>
+  <% end %>
+
+  <% if @profile.setops == true %>
+    <strong>Set Operations (Assistant Director):</strong>
+  <% end %>
+
+  <% if @profile.hair == true %>
+    <strong>Hair</strong>
+  <% end %>
+
+  <% if @profile.wardrobe == true %>
+    <strong>Wardrobe</strong>
+  <% end %>
+
+  <% if @profile.food == true %>
+    <strong>Food:</strong>
+  <% end %>
+
 </p>
 
 
