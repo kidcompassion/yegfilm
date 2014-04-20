@@ -1,13 +1,13 @@
 <div class="row">
   <div class="small-12 columns">
-
+      <%= link_to 'Back to Listings', profiles_path, :class=>'button round tiny' %>
     <p id="notice"><%= notice %></p>
 
     <p>
         <% if @profile.availability == true %>
-          Yes, I am currently available for projects.
+          <span class="green"><i class="fa fa-check-circle"></i> Yes, I am currently available for projects.</span>
         <% else %>  
-          No, I am not currently available for projects.
+          <span class="red"><i class="fa fa-times-circle"></i> No, I am not currently available for projects.</span>
         <% end %>
     </p>
 
@@ -112,7 +112,7 @@
     </p>
 
     <p>
-      <strong>Contact Me:</strong>
+      <strong>Contact email:</strong>
       <%= @profile.contact %>
     </p>
 
@@ -120,7 +120,7 @@
 </div>
 <div class="row">
   <div class="small-12 columns">
-  <%= link_to 'Edit', edit_profile_path(@profile) %> |
-  <%= link_to 'Back to Listings', profiles_path %>
+  <%= link_to 'Edit', edit_profile_path(@profile) %>
+
 </div>
 </div>

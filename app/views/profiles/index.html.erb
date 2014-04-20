@@ -2,15 +2,23 @@
   <h1>Yegfilm Listings</h1>
 </div>
 <div class="row">
+  <div class="small-12 columns">
+
+    pagination in desktop, infinite scroll in mobile
+    <span class="button small round">Filter unavailable people</span>
+    <h4>View By Skills:</h4>
+    <a class="button tiny round"> Editors</a> <a class="button tiny round">Directors</a> <a class="button tiny round">Producers</a> <a class="button tiny round">Grips</a> <a class="button tiny round">Lighting</a> <a class="button tiny round">Locations</a> <a class="button tiny round">Actors</a> <a class="button tiny round">Musicians</a> <a class="button tiny round">Hair and Makeup</a> <a class="button tiny round">Set operations (Assistant directors)</a>
+
+  </div>
 
     <% @profiles.each do |profile| %>
       <div class="small-12 medium-4 large-3 columns">
         <div class="card">
           <p>
           <% if profile.availability == true %>
-            Yes, I am currently available for projects
+            <span class="green"><i class="fa fa-check-circle"></i> Yes, I am currently available for projects</span>
           <% else %>
-            No, I am not currently available for projects
+            <span class="red"><i class="fa fa-times-circle"></i> No, I am not currently available for projects</spa>
           <% end %>
 
         </p>
