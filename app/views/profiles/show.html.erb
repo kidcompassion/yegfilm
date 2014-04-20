@@ -20,6 +20,14 @@
 </p>
 
 <p>
+  <strong>Editing:</strong>
+  <%= @profile.editing %>
+  <strong>Camera:</strong>
+  <%= @profile.camera %>
+</p>
+
+
+<p>
   <strong>My Skills:</strong>
   <%= @profile.skills %>
 </p>
@@ -36,3 +44,5 @@
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
+
+

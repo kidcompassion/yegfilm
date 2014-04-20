@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140419022814) do
+ActiveRecord::Schema.define(version: 20140420055814) do
 
   create_table "profiles", force: true do |t|
     t.string   "name"
@@ -23,6 +23,24 @@ ActiveRecord::Schema.define(version: 20140419022814) do
     t.text     "contact"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "editing"
+    t.boolean  "camera"
+    t.boolean  "sound"
+    t.boolean  "writing"
+    t.boolean  "animation"
+    t.boolean  "acting"
+    t.boolean  "lighting"
+    t.boolean  "grip"
+    t.boolean  "music"
+    t.boolean  "photography"
+    t.boolean  "artdept"
+    t.boolean  "locations"
+    t.boolean  "directing"
+    t.boolean  "producing"
+    t.boolean  "setops"
+    t.boolean  "hair"
+    t.boolean  "wardrobe"
+    t.boolean  "food"
   end
 
 end
