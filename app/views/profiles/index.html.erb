@@ -1,39 +1,38 @@
-<h1>Listing profiles</h1>
+<div class="row">
+  <h1>Yegfilm Listings</h1>
+</div>
+<div class="row">
+  <div class="small-12 columns">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Picture</th>
-      <th>Description</th>
-      <th>Availability</th>
-      <th>Skills</th>
-      <th>Projects</th>
-      <th>Contact</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+    pagination in desktop, infinite scroll in mobile
+    <span class="button small round">Filter unavailable people</span>
+    <h4>View By Skills:</h4>
+    <a class="button tiny round"> Editors</a> <a class="button tiny round">Directors</a> <a class="button tiny round">Producers</a> <a class="button tiny round">Grips</a> <a class="button tiny round">Lighting</a> <a class="button tiny round">Locations</a> <a class="button tiny round">Actors</a> <a class="button tiny round">Musicians</a> <a class="button tiny round">Hair and Makeup</a> <a class="button tiny round">Set operations (Assistant directors)</a>
 
-  <tbody>
+  </div>
+
     <% @profiles.each do |profile| %>
-      <tr>
-        <td><%= profile.name %></td>
-        <td><%= profile.picture %></td>
-        <td><%= profile.description %></td>
-        <td><%= profile.availability %></td>
-        <td><%= profile.skills %></td>
-        <td><%= profile.projects %></td>
-        <td><%= profile.contact %></td>
-        <td><%= link_to 'Show', profile %></td>
-        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="small-12 medium-4 large-3 columns">
+        <div class="card">
+          <p>
+          <% if profile.availability == true %>
+            <span class="green"><i class="fa fa-check-circle"></i> Yes, I am currently available for projects</span>
+          <% else %>
+            <span class="red"><i class="fa fa-times-circle"></i> No, I am not currently available for projects</spa>
+          <% end %>
+
+        </p>
+        <h3><%= profile.name %></h3>
+        <p><%= profile.description %></p>
+        <%= link_to 'Show', profile, :class=> 'button tiny round' %>
+      </div>
+    </div>
     <% end %>
-  </tbody>
-</table>
 
+</div>
 <br>
-
-<%= link_to 'New Profile', new_profile_path %>
+<div class="row">
+  <div class="small-12 columns">
+    <%= link_to 'New Profile', new_profile_path , :class=> 'button' %>
+  </div>
+</div>

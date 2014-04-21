@@ -1,6 +1,12 @@
-<h1>Editing profile</h1>
-
+<div class="row">
+	<div class="small-12 columns">
+	<h1>My profile</h1>
+</div>
+</div>
 <%= render 'form' %>
-
-<%= link_to 'Show', @profile %> |
-<%= link_to 'Back', profiles_path %>
+<div class="row">
+	<div class="small-12 columns">
+		<%= link_to 'Show', @profile, :class=>'button tiny round disabled' %> 
+		<%= link_to 'Back', profiles_path, :class=>'button tiny round disabled' %>
+	</div>
+</div>

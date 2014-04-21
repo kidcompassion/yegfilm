@@ -1,3 +1,5 @@
+<div class="row">
+  <div class="small-10 columns">
 <%= form_for(@profile) do |f| %>
   <% if @profile.errors.any? %>
     <div id="error_explanation">
@@ -27,6 +29,94 @@
     <%= f.label :availability %><br>
     <%= f.check_box :availability %>
   </div>
+
+ <div class="field">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <%= f.label :editing %><br>
+          <%= f.check_box :editing %>
+        </td>
+        <td>
+          <%= f.label :camera %><br>
+          <%= f.check_box :camera %>
+        </td>
+        <td>
+          <%= f.label :sound %><br>
+          <%= f.check_box :sound %>
+        </td>
+        <td>
+          <%= f.label :writing %><br>
+          <%= f.check_box :writing %>
+        </td>
+        <td>
+          <%= f.label :animation %><br>
+          <%= f.check_box :animation %>
+        </td>
+      </tr>
+      <tr>
+        <td>    
+          <%= f.label :lighting %><br>
+          <%= f.check_box :lighting %>
+        </td>
+        <td>
+          <%= f.label :grip %><br>
+          <%= f.check_box :grip %>
+        </td>
+        <td>
+          <%= f.label :music %><br>
+          <%= f.check_box :music %>
+        </td>
+        <td>
+          <%= f.label :photography %><br>
+          <%= f.check_box :photography %>
+        </td>
+        <td>
+          <%= f.label :artdept %><br>
+          <%= f.check_box :artdept %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.label :locations %><br>
+          <%= f.check_box :locations %>
+        </td>
+        <td>  
+          <%= f.label :directing %><br>
+          <%= f.check_box :directing %>
+        </td>
+        <td>  
+          <%= f.label :producing %><br>
+          <%= f.check_box :producing %>
+        </td>
+        <td>  
+          <%= f.label :setops %><br>
+          <%= f.check_box :setops %>
+        </td>
+        <td>
+          <%= f.label :hair %><br>
+          <%= f.check_box :hair %>
+        </td>
+      </tr>
+    <tr>
+      <td>  
+        <%= f.label :wardrobe %><br>
+        <%= f.check_box :wardrobe %>
+      </td>
+      <td>
+        <%= f.label :food %><br>
+        <%= f.check_box :food %>
+      </td>
+       <td>
+          <%= f.label :acting %><br>
+          <%= f.check_box :acting %>
+        </td>
+    </tr>
+</tbody>
+</table>
+  </div>
+
   <div class="field">
     <%= f.label :skills %><br>
     <%= f.text_area :skills %>
@@ -40,6 +130,8 @@
     <%= f.text_area :contact %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class=> 'button' %>
   </div>
 <% end %>
+</div>
+</div>
