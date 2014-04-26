@@ -120,7 +120,8 @@
 </div>
 <div class="row">
   <div class="small-12 columns">
+    <% if @profile.contact === current_user.email %>
   <%= link_to 'Edit', edit_profile_path(@profile) %>
-
+  <% end %>
 </div>
 </div>
