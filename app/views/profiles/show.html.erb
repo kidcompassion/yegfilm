@@ -1,19 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="small-12 columns">
+      <%= link_to 'Back to Listings', profiles_path, :class=>'button round tiny' %>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <%= @profile.name %>
-</p>
+    <p>
+        <% if @profile.availability == true %>
+          <span class="green"><i class="fa fa-check-circle"></i> Yes, I am currently available for projects.</span>
+        <% else %>  
+          <span class="red"><i class="fa fa-times-circle"></i> No, I am not currently available for projects.</span>
+        <% end %>
+    </p>
 
-<p>
-  <strong>Picture:</strong>
-  <%= @profile.picture %>
-</p>
+    <h1>
+      <%= @profile.name %>
+    </h1>
 
-<p>
-  <strong>About me:</strong>
-  <%= @profile.description %>
-</p>
-
+    <p>
+      <strong>About me:</strong>
+      <%= @profile.description %>
+    </p>
 <p>
   
   <% if @profile.availability == true %>
@@ -25,100 +30,101 @@
 
 <p>
 
-  <% if @profile.editing == true %>
-    <strong>Editing</strong>
-  <% end %>
-
 
   <% if @profile.camera == true %>
-    <strong>Camera</strong>
+    <span class="button tiny round">Camera</span>
   <% end %>
 
   <% if @profile.sound == true %>
-    <strong>Sound</strong>
+    <span class="button tiny round">Sound</span>
   <% end %>
 
-
-
   <% if @profile.writing == true %>
-    <strong>Writing</strong>
+    <span class="button tiny round">Writing</span>
   <% end %>
 
   <% if @profile.animation == true %>
-    <strong>Animation</strong>
+    <span class="button tiny round">Animation</span>
   <% end %>
 
   <% if @profile.acting  == true %>
-    <strong>Acting</strong>
+    <span class="button tiny round">Acting</span>
   <% end %>
 
   <% if @profile.lighting  == true %>
-    <strong>Lighting</strong>
+    <span class="button tiny round">Lighting</span>
   <% end %>
 
   <% if @profile.grip  == true %>
-    <strong>Grip:</strong>
+    <span class="button tiny round">Grip</span>
   <% end %>
 
   <% if @profile.music == true %>
-    <strong>Music</strong>
+    <span class="button tiny round">Music</span>
   <% end %>
 
   <% if @profile.photography == true %>
-    <strong>Photography:</strong>
+    <span class="button tiny round">Photograph</span>
   <% end %>
 
   <% if @profile.artdept == true %>
-    <strong>Art Department</strong>
+    <span class="button tiny round">Art Department</span>
   <% end %>
 
   <% if @profile.locations == true %>
-    <strong>Locations</strong>
+    <span class="button tiny round">Locations</span>
   <% end %>
 
   <% if @profile.directing == true %>
-    <strong>Directing</strong>
+    <span class="button tiny round">Directing</span>
   <% end %>
 
   <% if @profile.producing == true %>
-    <strong>Producing</strong>
+    <span class="button tiny round">Producing</span>
   <% end %>
 
   <% if @profile.setops == true %>
-    <strong>Set Operations (Assistant Director):</strong>
+    <span class="button tiny round">Set Operations (Assistant Director):</span>
   <% end %>
 
   <% if @profile.hair == true %>
-    <strong>Hair</strong>
+    <span class="button tiny round">Hair</span>
   <% end %>
 
   <% if @profile.wardrobe == true %>
-    <strong>Wardrobe</strong>
+    <span class="button tiny round">Wardrobe</span>
   <% end %>
 
   <% if @profile.food == true %>
-    <strong>Food:</strong>
+    <span class="button tiny round">Food</span>
   <% end %>
 
 </p>
 
 
-<p>
-  <strong>My Skills:</strong>
-  <%= @profile.skills %>
-</p>
 
-<p>
-  <strong>Projects I'm interested in:</strong>
-  <%= @profile.projects %>
-</p>
+    <p>
+      <strong>My Skills:</strong>
+      <%= @profile.skills %>
+    </p>
 
-<p>
-  <strong>Contact Me:</strong>
-  <%= @profile.contact %>
-</p>
+    <p>
+      <strong>The kinds of projects I'm interested in:</strong>
+      <%= @profile.projects %>
+    </p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+    <p>
+      <strong>Contact email:</strong>
+      <%= @profile.contact %>
+    </p>
 
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 columns">
+    <% if @profile.contact === current_user.email %>
+  <%= link_to 'Edit', edit_profile_path(@profile) %>
+  <% end %>
+</div>
+</div>
 
