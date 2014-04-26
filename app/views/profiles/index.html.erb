@@ -2,18 +2,19 @@
   <h1>Yegfilm Listings</h1>
 </div>
 <div class="row">
-  <div class="small-12 columns">
+  <div id="filters" class="button-group">
+  <button data-filter="*">show all</button>
+  <button data-filter=".editing">Editing</button>
+  <button data-filter=".camera">Camera</button>
+  <button data-filter=".hair">Hair</button>
+  <button data-filter=".acting">Acting</button>
+  <button data-filter=".sound">Sound</button>
+</div>
 
-    pagination in desktop, infinite scroll in mobile
-    <span class="button small round">Filter unavailable people</span>
-    <h4>View By Skills:</h4>
-    <a class="button tiny round"> Editors</a> <a class="button tiny round">Directors</a> <a class="button tiny round">Producers</a> <a class="button tiny round">Grips</a> <a class="button tiny round">Lighting</a> <a class="button tiny round">Locations</a> <a class="button tiny round">Actors</a> <a class="button tiny round">Musicians</a> <a class="button tiny round">Hair and Makeup</a> <a class="button tiny round">Set operations (Assistant directors)</a>
 
-  </div>
-
+  <div id="container" class="js-masonry row">
     <% @profiles.each do |profile| %>
-      <div class="small-12 medium-4 large-3 columns">
-        <div class="card">
+        <div class="small-12 medium-3 largw-4 columns item card <% if profile.editing == true %>editing <%else%> camera<% end %>">
           <p>
           <% if profile.availability == true %>
             <span class="green"><i class="fa fa-check-circle"></i> Yes, I am currently available for projects</span>
@@ -25,10 +26,8 @@
         <h3><%= profile.name %></h3>
         <p><%= profile.description %></p>
         <%= link_to 'Show', profile, :class=> 'button tiny round' %>
-      </div>
     </div>
     <% end %>
-
 </div>
 <br>
 <div class="row">

@@ -11,3 +11,8 @@
 .red {
 	color: red;
 }
+
+.item {
+	@extend .small-4;
+	@extend .column;
+}
