@@ -5,9 +5,8 @@ $(document).ready(function(){
 	$container.isotope({
 	  // options
 	  itemSelector: '.item',
-	    masonry: {
-	    columnWidth: 200
-	  }
+	  layoutMode: 'fitRows',
+	  width: 200
 	});
 
 // filter items on button click

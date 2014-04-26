@@ -11,10 +11,10 @@
   <button data-filter=".sound">Sound</button>
 </div>
 
-<div class="row">
-  <div  id="container" class="js-masonry">
+
+  <div id="container" class="js-masonry row">
     <% @profiles.each do |profile| %>
-        <div class="item card <% if profile.editing == true %>editing <%else%> camera<% end %>">
+        <div class="small-12 medium-3 largw-4 columns item card <% if profile.editing == true %>editing <%else%> camera<% end %>">
           <p>
           <% if profile.availability == true %>
             <span class="green"><i class="fa fa-check-circle"></i> Yes, I am currently available for projects</span>
@@ -28,8 +28,6 @@
         <%= link_to 'Show', profile, :class=> 'button tiny round' %>
     </div>
     <% end %>
-
-</div>
 </div>
 <br>
 <div class="row">
