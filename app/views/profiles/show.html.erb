@@ -19,15 +19,16 @@
       <strong>About me:</strong>
       <%= @profile.description %>
     </p>
-
+<p>
+  
+  <% if @profile.availability == true %>
+    Yes, I am currently available for projects.
+  <% else %>  
+    No, I am not currently available for projects.
+  <% end %>
+</p>
 
 <p>
-  <strong>
-    My interests:
-  </strong>
-  <% if @profile.editing == true %>
-    <span class="button tiny round">Editing</span>
-  <% end %>
 
 
   <% if @profile.camera == true %>
@@ -101,6 +102,7 @@
 </p>
 
 
+
     <p>
       <strong>My Skills:</strong>
       <%= @profile.skills %>
@@ -125,3 +127,4 @@
   <% end %>
 </div>
 </div>
+
