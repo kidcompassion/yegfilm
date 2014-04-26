@@ -33,6 +33,8 @@ gem 'font-awesome-rails'
 
 gem 'devise'
 
+gem 'cancan'
+
 gem 'rails_12factor', group: :production
 
 group :doc do

@@ -1,5 +1,5 @@
 Yegfilm::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "registrations" }
   get "profiles/index"
   resources :profiles
   root to: 'profiles#index'
