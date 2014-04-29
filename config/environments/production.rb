@@ -48,6 +48,16 @@ Yegfilm::Application.configure do
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
+  # config/environments/production.rb
+config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['yegfilm'],
+    :access_key_id => ENV['AKIAJE6WBAPACL4SZS2A'],
+    :secret_access_key => ENV['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']
+  }
+}
+
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
