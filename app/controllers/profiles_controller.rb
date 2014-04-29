@@ -29,6 +29,8 @@ class ProfilesController < ApplicationController
     respond_to do |format|
       if @profile.save
         format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
+        format.html { redirect_to @profile, notice: 'Image was successfully created.' }
+
         format.json { render action: 'show', status: :created, location: @profile }
       else
         format.html { render action: 'new' }
@@ -36,6 +38,7 @@ class ProfilesController < ApplicationController
       end
     end
   end
+
 
   # PATCH/PUT /profiles/1
   # PATCH/PUT /profiles/1.json

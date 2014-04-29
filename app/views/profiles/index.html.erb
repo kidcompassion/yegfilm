@@ -35,6 +35,7 @@
 
         </p>
         <h3><%= profile.name %></h3>
+        <%= image_tag profile.picture.url(:medium) %>
         <p><%= profile.description %></p>
         <%= link_to 'Show', profile, :class=> 'button tiny round' %>
     </div>

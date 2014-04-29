@@ -15,6 +15,7 @@
       <%= @profile.name %>
     </h1>
 
+<%= image_tag @profile.picture.url(:medium) %>
     <p>
       <strong>About me:</strong>
       <%= @profile.description %>
