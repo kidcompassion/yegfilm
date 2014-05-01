@@ -52,9 +52,9 @@ Yegfilm::Application.configure do
 config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => ENV['yegfilm'],
-    :access_key_id => ENV['AKIAJE6WBAPACL4SZS2A'],
-    :secret_access_key => ENV['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']
+    :bucket => ENV['S3_BUCKET_NAME'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
 }
 
