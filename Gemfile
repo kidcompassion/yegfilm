@@ -37,6 +37,8 @@ gem 'paperclip'
 
 gem 'aws-sdk'
 
+gem 'paperclip-aws'
+
 gem 'rails_12factor', group: :production
 
 group :doc do

@@ -76,14 +76,15 @@ Yegfilm::Application.configure do
 
 
 # config/environments/production.rb
-config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => ENV['S3_BUCKET_NAME'],
-    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-  }
-}
+  config.paperclip_defaults = {
+          :storage => :s3,
+          :s3_credentials => {
+            :bucket => ENV['AWS_BUCKET'],
+            :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+            :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+          },
+          :path => ":class/:id/:basename_:style.:extension",
+          :url => ":s3_sg_url"
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
