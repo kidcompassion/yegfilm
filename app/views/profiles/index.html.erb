@@ -3,7 +3,7 @@
 </div>
   <div class="row">
   <div id="filters" class="button-group">
-    <button data-filter="*">show all</button>
+    <button data-filter="*">Reset Choices</button>
     <button data-filter=".camera">Camera</button>
     <button data-filter=".sound">Sound</button>
     <button data-filter=".writing">Writing</button>
@@ -35,6 +35,7 @@
 
         </p>
         <h3><%= profile.name %></h3>
+         <img src="<%= profile.picture %>" height="100" width="100"/>
         <p><%= profile.description %></p>
         <%= link_to 'Show', profile, :class=> 'button tiny round' %>
     </div>

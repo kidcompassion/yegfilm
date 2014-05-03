@@ -1,3 +1,21 @@
+
+
+h1 {
+	font-family: 'Cabin', sans-serif;
+	font-weight: 800;
+}
+
+h2 {
+	font-family: 'Cabin', sans-serif;
+	font-weight: 00;
+	color: #fff;
+}
+
+h3 {
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 2rem;
+}
 .card {
 	border: solid 1px gray;
 	padding: 10px;
@@ -15,4 +33,31 @@
 .item {
 	@extend .small-4;
 	@extend .column;
+}
+
+
+.underline {
+	text-decoration: underline;
+}
+
+
+
+/* NAV
+=========================*/
+.top-bar {
+	color: #fff;
+	height: auto;
+	
+	ul {
+		
+		li {
+			float: left;
+			margin: 20px;
+			
+			a {
+				color: #fff;
+			}
+		}
+		
+	}
 }
