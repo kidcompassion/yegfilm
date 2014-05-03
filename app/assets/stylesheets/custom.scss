@@ -1,8 +1,11 @@
-
+body {
+	background-color: #000 !important;
+}
 
 h1 {
 	font-family: 'Cabin', sans-serif;
 	font-weight: 800;
+	color: #fff;
 }
 
 h2 {
@@ -17,9 +20,9 @@ h3 {
 	font-size: 2rem;
 }
 .card {
-	border: solid 1px gray;
-	padding: 10px;
-	margin: 10px;
+	border: dashed 1px #e6e6e6;
+	background-color: #fff;
+	margin: 5px;
 }
 
 .green {
@@ -30,11 +33,11 @@ h3 {
 	color: red;
 }
 
-.item {
-	@extend .small-4;
-	@extend .column;
-}
 
+.white-bg {
+	background-color: #fff;
+	padding:20px;
+}
 
 .underline {
 	text-decoration: underline;
@@ -47,6 +50,7 @@ h3 {
 .top-bar {
 	color: #fff;
 	height: auto;
+	background-color: transparent;
 	
 	ul {
 		
@@ -73,6 +77,20 @@ h3 {
 
 /* INDEX CARDS
 ======================*/
+
+.availability {
+	background-color: green;
+	padding: 5px;
+	color: #fff;
+}
+
+.no-availability {
+	background-color: #A81B1B;
+	padding: 5px;
+	color: #fff;
+}
+
+
 img {
 	height: 100px;
 	width:100px;

@@ -10,7 +10,7 @@
 <body>
 	<nav class="top-bar">
 		<ul class="left">
-			<li><h2>#yegfilm </h2></li>
+			<li><h2><a href="/">#yegfilm</a> </h2></li>
 		</ul>
 		<ul class ="right">
 			<% if user_signed_in? %>
@@ -18,10 +18,16 @@
 	  			Hi, <%= current_user.email %>!
 				</li>
 				<li>
-	  			<%= link_to 'Settings', edit_user_registration_path, :class => 'navbar-link' %> 
+					<a href="/profiles/<%= current_user.id%>"><i class="fa fa-user"></i> View my Profile</a>
 				</li>
 				<li>
-	  			<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+					 <a href="/profiles/<%= current_user.id%>/edit"><i class="fa fa-pencil-square"></i> Edit my Profile</a>
+				</li>
+				<li>
+	  			<i class="fa fa-cog"></i> <%= link_to 'Settings', edit_user_registration_path, :class => 'navbar-link' %> 
+				</li>
+				<li>
+	  			<i class="fa fa-sign-out"></i> <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 				</li>
 		
 			<% else %>
@@ -36,6 +42,7 @@
 	</nav>
 <div class="wrapper row">
 		
+    
 
 	
 <span class="notice"><%= notice %></span>

@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row white-bg">
   <div class="small-10 columns">
 <%= form_for(@profile) do |f| %>
   <% if @profile.errors.any? %>
@@ -120,17 +120,18 @@
   </div>
 
   <div class="field">
-    Here's where you get to elaborate on your skills. Want to edit, but don't have experience? mention those details here. <br />
+    <label>Describe your experience level: </label>
+  
     <%= f.text_area :skills %>
   </div>
 
 
   <div class="field">
-    What Kind of Projects are you Interested in? <br />
+    <label>What kind of projects are you interested in working on? (Genre, Length, Paid/unpaid)</label>
     <%= f.text_area :projects %>
   </div>
   <div class="field">
-    How can other filmmakers contact you?
+    <label>How can other filmmakers contact you? Add links to your email or social media accounts below.</label>
     <%= f.text_area :contact %>
   </div>
   <div class="actions">
