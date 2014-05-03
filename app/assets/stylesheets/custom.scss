@@ -4,7 +4,7 @@ body {
 }
 
 .photo-box {
-	background-image: url(image-path('yegfilm.jpg'));
+	background-image: url(yegfilm.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -24,6 +24,11 @@ body {
 
 .wrapper {
 
+}
+
+
+label {
+	color: #fff;
 }
 
 
@@ -49,7 +54,7 @@ h3 {
 	font-size: 2rem;
 }
 .card {
-
+	border: dashed 1px #e6e6e6;
 	background-color: #fff;
 	margin: 5px;
 }
@@ -68,6 +73,11 @@ h3 {
 	padding:20px;
 	position: relative;
 	z-index: 100;
+	
+	label {
+		color: #333;
+		font-weight: bold;
+	}
 }
 
 .underline {
@@ -139,5 +149,5 @@ img {
 footer {
 	width: 100%;
 	text-align: center;
-	color: #fff;
+	color:#fff;
 }
