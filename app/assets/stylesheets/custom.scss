@@ -7,7 +7,7 @@ h1 {
 
 h2 {
 	font-family: 'Cabin', sans-serif;
-	font-weight: 00;
+	font-weight: 400;
 	color: #fff;
 }
 
@@ -60,4 +60,21 @@ h3 {
 		}
 		
 	}
+}
+
+/* SELECTS
+======================*/
+#filters {
+	button {
+		font-family: 'Cabin', sans-serif;
+		
+	}
+}
+
+/* INDEX CARDS
+======================*/
+img {
+	height: 200px;
+	width:200px;
+	border-radius: 50%;
 }
