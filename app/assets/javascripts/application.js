@@ -15,7 +15,6 @@
 //= require foundation
 //= require isotope.pkgd.min
 //= require yegfilm_masonry
-//= require turbolinks
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

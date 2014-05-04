@@ -1,6 +1,5 @@
 body {
 	background-color: #4B8399!important;
-
 }
 
 .photo-box {
@@ -23,7 +22,8 @@ body {
 }
 
 .wrapper {
-
+	position:relative;
+	z-index: 100;
 }
 
 .msg {

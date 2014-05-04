@@ -54,7 +54,12 @@
           <% end %>
 
         </p>
-             <img src="<%= profile.picture %>"/>
+        <% if profile.picture? %>
+          <img src="<%= profile.picture %>" height="100" width="100"/>
+        <% else %>
+          <%= image_tag 'avatar.jpg' %>
+        <% end%>
+        
         <h3><%= profile.name %></h3>
         <strong><%= profile.name %>'s Skills</strong>
         <ul>
