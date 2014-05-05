@@ -23,17 +23,24 @@
 <body>
 	<div class="photo-box">
 	</div>
+	
+	<% if params[:action] != 'new' %>
+	
 	<nav class="top-bar">
 		<ul class="left">
-			<li><h2><a href="/">#yegfilm <span class="alpha">Alpha</span></a> </h2></li>
+			<li>
+				<h2>
+				<%= link_to '#yegfilm', profiles_path %> <span class="alpha">Alpha</span>
+				</h2>
+			</li>
 		</ul>
-		
+
 		<ul class ="right">
 			<% if user_signed_in? %>
 				<li>
 	  			Hi, <%= current_user.email %>!
 				</li>
-				<li>
+				<li>			
 					<a href="/profiles/<%= current_user.id%>"><i class="fa fa-user"></i> View my Profile</a>
 				</li>
 				<li>
@@ -55,6 +62,9 @@
 			<% end %>
 		</ul>
 	</nav>
+
+	<%end%>
+	
 <div class="wrapper row">
 		
     

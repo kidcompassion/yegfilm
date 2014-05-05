@@ -8,7 +8,9 @@
 
     <p>
       
-      
+    <p>Current user ID: <%= current_user.id%></p>
+    <p>Profile ID: <%= @profile.id %>
+    
         <% if @profile.availability == true %>
           <span class="green"><i class="fa fa-check-circle"></i> Yes, I am currently available for projects.</span>
         <% else %>  
